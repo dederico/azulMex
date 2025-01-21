@@ -228,3 +228,9 @@ async def main(message: cl.Message):
         event_handler=EventHandler(assistant_name=assistant.name),
     ) as stream:
         await stream.until_done()
+
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 8000))  # Render asigna el puerto en la variable de entorno PORT
+    from chainlit import run
+    run(host="0.0.0.0", port=port)
