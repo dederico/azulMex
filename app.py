@@ -21,7 +21,7 @@ async_openai_client = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 sync_openai_client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 assistant = sync_openai_client.beta.assistants.retrieve(
-    os.environ.get("OPENAI_ASSISTANT_ID") or "asst_SjDTfFho1MR2deSRG9pMDXJw"
+    os.environ.get("OPENAI_ASSISTANT_ID")
 )
 
 config.ui.name = "Metelmex"  # Nombre de la empresa en la UI
